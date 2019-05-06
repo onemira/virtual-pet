@@ -1,14 +1,62 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Virtual Pet</title>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/screen.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/screen.css" />
   </head>
   <body>
-    <h1 class='hello-world'></h1>
-    <script src="/main.js" charset="utf-8"></script>
+    <header>
+      <h1>
+        My Virtual Pet: LOLA
+      </h1>
+    </header>
+
+    <main>
+      <section class="pet-image-container">
+        <img class="pet-image" src="./lola.png" />
+      </section>
+      <section class="dashboard">
+        <div>
+          Name: <strong><span class="name"></span></strong>
+        </div>
+        <div>
+          Weight: <strong><span class="weight"></span> pounds</strong>
+        </div>
+        <div>
+          Happiness:
+          <strong><span class="happiness"></span> tail wags (per min)</strong>
+        </div>
+        <div class="button-container">
+          <button class="treat-button">
+            Treat
+          </button>
+          <button class="play-button">
+            Play
+          </button>
+          <button class="exercise-button">
+            Exercise
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.1.min.js"
+      integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/main.js"></script>
   </body>
 </html>

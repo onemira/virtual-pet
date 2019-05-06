@@ -1,20 +1,27 @@
 {
-  "private": true,
-  "name": "virtual-pet",
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "my-glitch-app",
+  "version": "0.0.1",
+  "description": "What am I about?",
+  "main": "server.js",
   "scripts": {
-    "start": "browser-sync start --server public --files public",
-    "deploy": "echo 'To setup deployment run: yarn setup-deploy'",
-    "setup-deploy": "app-app --deploy && yarn deploy"
+    "start": "node server.js"
   },
-  "devDependencies": {
-    "browser-sync": "^2.26.5",
-    "eslint": "^5.16.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-node": "^9.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "stylelint": "^10.0.1",
-    "stylelint-config-standard": "^18.3.0"
-  }
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "engines": {
+    "node": "8.1.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/welcome-project"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
